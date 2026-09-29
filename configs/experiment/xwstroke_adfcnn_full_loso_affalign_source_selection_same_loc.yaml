@@ -1,0 +1,53 @@
+# Full 50-subject LOSO: ADFCNN + Aff+Align + Clinical Source Selection (same location only)
+
+experiment:
+  name: "XWStroke_Full50_ADFCNN_AffAlign_SourceSel_SameLoc"
+  seed: 42
+  description: "Full 50-subject LOSO with ADFCNN, Aff+Align, and same-location clinical source selection"
+
+data:
+  dataset: "XWStroke"
+  subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+             21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+             41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+  info_path: "configs/dataset/XWStroke_affected_aligned.yaml"
+
+model:
+  type: "ADFCNN"
+  args: {}
+
+training:
+  device: "cuda"
+  epochs: 100
+  batch_size: 256
+  save_checkpoints: true
+  use_fp16_compression: true
+  num_workers: 0
+  pin_memory: false
+
+  optimizer:
+    type: "Adam"
+    lr: 0.001
+    weight_decay: 0.01
+
+trainer:
+  type: "StreamingLOSOTrainer"
+  args:
+    subject_buffer_size: 10
+    gradient_accumulation_steps: 2
+    mixed_precision: true
+    source_selection:
+      enabled: true
+      metadata_path: "results/stratified/stratified_analysis_detailed.csv"
+      k: 10
+      location_weight: 1.0
+      duration_weight: 1.0
+      nihss_weight: 1.0
+      require_same_location: true
+
+paths:
+  root_dir: "./experiments"
+
+logging:
+  level: "INFO"
+  console: true

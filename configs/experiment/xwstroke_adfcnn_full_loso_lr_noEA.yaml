@@ -1,0 +1,86 @@
+experiment:
+  name: XWStroke_Full50_ADFCNN_LR_noEA
+  seed: 42
+  description: Full 50-subject LOSO with ADFCNN, LR_noEA (architecture robustness
+    check, hyperparameters matched to EEGNet)
+data:
+  dataset: XWStroke
+  subjects:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 35
+  - 36
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+  - 47
+  - 48
+  - 49
+  - 50
+  info_path: configs/dataset/XWStroke_noEA_noaug.yaml
+model:
+  type: ADFCNN
+  args: {}
+training:
+  device: cuda
+  epochs: 100
+  batch_size: 512
+  save_checkpoints: true
+  use_fp16_compression: true
+  num_workers: 4
+  pin_memory: true
+  prefetch_factor: 2
+  optimizer:
+    type: Adam
+    lr: 0.001
+    weight_decay: 0.01
+trainer:
+  type: StreamingLOSOTrainer
+  args:
+    subject_buffer_size: 49
+    gradient_accumulation_steps: 1
+    mixed_precision: false
+paths:
+  root_dir: ./experiments
+logging:
+  level: INFO
+  console: true

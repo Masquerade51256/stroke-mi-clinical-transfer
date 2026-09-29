@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: >-
+  The Limits of Clinical Metadata for Cross-Subject Stroke Motor
+  Imagery Decoding: Evidence from Anatomy-Aware Relabelling and Alignment
+abstract: >-
+  Code release for a systematic evaluation of clinical-metadata-driven
+  transfer selection in stroke motor-imagery BCIs (50 patients, LOSO).
+  Shows that clinical similarity is insufficient as a direct decision
+  rule for source selection and validation-based pipeline selection.
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+license: MIT
+year: 2026
+note: "Accepted at IEEE BHI 2026."
