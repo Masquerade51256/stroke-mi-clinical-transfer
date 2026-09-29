@@ -50,7 +50,7 @@ Backbones: **EEGNet** (main), **ADFCNN**, plus **ShallowConvNet** and
 ## Installation
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/Masquerade51256/stroke-mi-clinical-transfer.git
 cd stroke-mi-clinical-transfer
 
 conda create -n stroke-mi python=3.10
