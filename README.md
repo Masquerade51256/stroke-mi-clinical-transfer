@@ -124,10 +124,12 @@ exact commands is given in [docs/REPRODUCING.md](docs/REPRODUCING.md).
 If you use this code, please cite our paper and the dataset:
 
 ```bibtex
-@inproceedings{stroke_mi_clinical_bhi2026,
+@inproceedings{liu2026limits,
   title     = {The Limits of Clinical Metadata for Cross-Subject Stroke Motor
                Imagery Decoding: Evidence from Anatomy-Aware Relabelling and
                Alignment},
+  author    = {Liu, Yuehan and Ye, Linjia and Kuang, Mengfei and Duan, Shengcai
+               and Tao, Wei and Yang, Yi and Wan, Feng},
   booktitle = {Proc. IEEE Int. Conf. Biomedical and Health Informatics (BHI)},
   year      = {2026},
   note      = {Accepted}

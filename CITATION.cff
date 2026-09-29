@@ -9,8 +9,20 @@ abstract: >-
   Shows that clinical similarity is insufficient as a direct decision
   rule for source selection and validation-based pipeline selection.
 authors:
-  - family-names: "TODO"
-    given-names: "TODO"
+  - family-names: "Liu"
+    given-names: "Yuehan"
+  - family-names: "Ye"
+    given-names: "Linjia"
+  - family-names: "Kuang"
+    given-names: "Mengfei"
+  - family-names: "Duan"
+    given-names: "Shengcai"
+  - family-names: "Tao"
+    given-names: "Wei"
+  - family-names: "Yang"
+    given-names: "Yi"
+  - family-names: "Wan"
+    given-names: "Feng"
 license: MIT
 year: 2026
 note: "Accepted at IEEE BHI 2026."
